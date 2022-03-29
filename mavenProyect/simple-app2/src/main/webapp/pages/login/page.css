@@ -1,0 +1,58 @@
+.login-page {
+}
+
+.login-page .title {
+	background-color: #a2b9bc;
+	text-align: center;
+	color: white;
+	padding: 10px;
+	font-size: 1.6em;
+}
+
+.login-page .login-panel {
+	margin: 150px auto;
+	width: 450px;
+	background-color: white;
+	border-radius: 10px;
+	border: 2px solid lightgray;
+	padding: 0px;
+}
+
+.login-page .login-panel .login-panel-header {
+	font-weight: bold;
+	background-color: #36486b;
+	color:white;
+	text-align: center;
+	padding: 10px;
+	font-size:1.1em;
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+	border-top: 1px solid lightgray;
+}
+
+.login-page .login-panel .fields {
+	padding:0px 30px;;
+}
+
+.login-page .login-panel .fields .fieldset {
+	margin-top: 5px;
+}
+
+.login-page .login-panel .fields .fieldset label {
+	margin-left: 5px;
+}
+
+.login-page .login-panel .fields .fieldset input {
+	
+}
+
+.login-page .login-panel  .panel-footer {
+	margin-top:20px;
+	border-top: 1px solid lightgray;
+	padding: 10px 0px 10px 0px;
+	text-align: center;
+}
+
+.login-page .login-panel  .panel-footer button {
+	
+}

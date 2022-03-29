@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html" xmlns:p="http://primefaces.org/ui" xmlns:ui="http://xmlns.jcp.org/jsf/facelets" xmlns:c="http://xmlns.jcp.org/jsp/jstl/core" xmlns:f="http://xmlns.jcp.org/jsf/core">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta name="description" content="" />
+<meta name="author" content="" />
+<title>Please sign in</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous" />
+
+<link rel="stylesheet" href="/resources/app.css?reload=#{util.reloadRandom()}" type="text/css" />
+<link rel="stylesheet" href="page.css" type="text/css" />
+</head>
+<body>
+	<div class="login-page">
+		<div class="title">Welcome to your App</div>
+		<form method="post" action="/pages/login/index.xhtml">
+			<div class="login-panel ">
+				<div class="login-panel-header">Please Sign in</div>
+				<div class="fields">
+					<div class="fieldset">
+						<label for="username">Username</label>
+						<input type="text" id="username" name="username" class="form-control" placeholder="Username" required="required" autofocus="autofocus" />
+					</div>
+					<div class="fieldset">
+						<label for="password">Password</label>
+						<input type="password" id="password" name="password" class="form-control" placeholder="Password" required="required" />
+					</div>
+					<div class="panel-footer">
+						<button class="btn btn-primary" type="submit">Sign in</button>
+					</div>
+				</div>
+			</div>
+		</form>
+		<ui:include src="/WEB-INF/templates/inc/footer.xhtml"/>
+	</div>
+</body>
+</html>
