@@ -48,7 +48,6 @@ public abstract class PiedraPapelTijeraFactory {
 	
 	public static PiedraPapelTijeraFactory getInstance(int pNum) {
 		
-		//el padre conoce a todos sus hijos
 		elementos = new ArrayList<PiedraPapelTijeraFactory>();
 		elementos.add(new Piedra());
 		elementos.add(new Papel());
