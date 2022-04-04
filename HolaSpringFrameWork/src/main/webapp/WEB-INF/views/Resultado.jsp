@@ -11,8 +11,14 @@
 </head>
 <body>
 
-	<h1>Resultado</h1>
-	<h1>${mensaje}</h1>
-	
+	<h1>El resultado del juego es:</h1>
+	<p>El jugador eligio:</p>
+	<p>${jugador}</p>
+	<br>
+	<p>La computadora eligio:</p>
+	<p>${computadora}</p>
+	${resultado}
+	<br>
+	<a href="./Juego"><button type="button">Volver a jugar!</button></a>	
 </body>
 </html>
