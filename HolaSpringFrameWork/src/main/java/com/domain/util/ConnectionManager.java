@@ -16,9 +16,7 @@ public class ConnectionManager {
 		Class.forName("com.mysql.cj.jdbc.Driver");
 		//Obtengo la conexion
 		conection = DriverManager.getConnection("jdbc:mysql://localhost:3306/asapconsulting", "root", "38661061");
-		
-		
-		
+			
 	}
 	
 	public static void desconectar() throws SQLException {
@@ -29,10 +27,4 @@ public class ConnectionManager {
 	public static Connection getConection() {
 		return conection;
 	}
-
-	
-	
-	
-	
-
 }

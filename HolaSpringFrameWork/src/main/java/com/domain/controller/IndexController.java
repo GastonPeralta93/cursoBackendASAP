@@ -1,5 +1,6 @@
 package com.domain.controller;
 
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -7,6 +8,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+
+//import com.domain.modelo.Modelo;
+import com.domain.modelo.dao.AlumnoDAO;
+//import com.domain.modelo.dao.DAO;
 
 import ar.edu.asap.practica0.modelo.PiedraPapelTijeraFactory;
 
@@ -24,17 +29,26 @@ public class IndexController {
 	}
 	
 	@RequestMapping("/Listado")
-	public String goListado(Model model) {
-		List<String> alumnos = new ArrayList<String>();
-		alumnos.add("Juan");
-		alumnos.add("Pedro");
-		alumnos.add("José");
+	public String goListado(Model model) throws ClassNotFoundException, SQLException {
+		
+		AlumnoDAO aluDao;
+		
+		try {
+			aluDao = new AlumnoDAO();
+			List<com.domain.modelo.Modelo> alumnos = aluDao.leer(null); 	
+
+			model.addAttribute("alumnos", alumnos);
+
+		} catch (ClassNotFoundException | SQLException e) {
+			
+			e.printStackTrace();
+		}
 		
 		model.addAttribute("titulo", "Listado de alumnos");
 		model.addAttribute("profesor", "Gabriel Casas");
-		model.addAttribute("alumnos", alumnos);
 		
 		return "Listado";
+		
 	}
 	
 	@RequestMapping("/Juego")

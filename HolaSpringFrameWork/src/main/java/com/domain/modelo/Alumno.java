@@ -8,7 +8,7 @@ public class Alumno implements Modelo, Vaciable {
 	private String nombre;
 	private String apellido;
 	private String email;
-	private String estudios;
+	private String conocimientos;
 	private String linkArepositorio;
 	
 	//observaciones no lo ponemos
@@ -22,13 +22,13 @@ public class Alumno implements Modelo, Vaciable {
 		this.codigo = codigo;
 	}
 	
-	public Alumno(int codigo, String nombre, String apellido, String email, String estudios, String linkArepositorio) {
+	public Alumno(int codigo, String nombre, String apellido, String email, String conocimientos, String linkArepositorio) {
 		super();
 		this.codigo = codigo;
 		this.nombre = nombre;
 		this.apellido = apellido;
 		this.email = email;
-		this.estudios = estudios;
+		this.conocimientos = conocimientos;
 		this.linkArepositorio = linkArepositorio;
 	}
 
@@ -64,12 +64,12 @@ public class Alumno implements Modelo, Vaciable {
 		this.email = email;
 	}
 
-	public String getEstudios() {
-		return estudios;
+	public String getConocimientos() {
+		return conocimientos;
 	}
 
-	public void setEstudios(String estudios) {
-		this.estudios = estudios;
+	public void setConocimientos(String conocimientos) {
+		this.conocimientos = conocimientos;
 	}
 
 	public String getLinkArepositorio() {
@@ -103,7 +103,7 @@ public class Alumno implements Modelo, Vaciable {
 	@Override
 	public String toString() {
 		return "Alumno [codigo=" + codigo + ", nombre=" + nombre + ", apellido=" + apellido + ", email=" + email
-				+ ", estudios=" + estudios + ", linkArepositorio=" + linkArepositorio + "]";
+				+ ", estudios=" + conocimientos + ", linkArepositorio=" + linkArepositorio + "]";
 	}
 
 	@Override
@@ -113,8 +113,9 @@ public class Alumno implements Modelo, Vaciable {
 				(nombre == null || nombre.isEmpty()) &&
 				(apellido == null || apellido.isEmpty()) &&
 				(email == null || email.isEmpty()) &&
-				(estudios == null || estudios.isEmpty()) &&
+				(conocimientos == null || conocimientos.isEmpty()) &&
 				(linkArepositorio == null || linkArepositorio.isEmpty());			
 		
 	}
 }
+
