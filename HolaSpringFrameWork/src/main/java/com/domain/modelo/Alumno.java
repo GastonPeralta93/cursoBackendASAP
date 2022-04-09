@@ -102,7 +102,7 @@ public class Alumno implements Modelo, Vaciable {
 
 	@Override
 	public String toString() {
-		return "Alumno [codigo=" + codigo + ", nombre=" + nombre + ", apellido=" + apellido + ", email=" + email
+		return "\n Alumno [codigo=" + codigo + ", nombre=" + nombre + ", apellido=" + apellido + ", email=" + email
 				+ ", estudios=" + conocimientos + ", linkArepositorio=" + linkArepositorio + "]";
 	}
 

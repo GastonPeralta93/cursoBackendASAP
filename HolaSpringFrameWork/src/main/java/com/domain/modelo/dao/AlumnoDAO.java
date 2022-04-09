@@ -87,7 +87,7 @@ public class AlumnoDAO implements DAO {
 	}
 
 	@Override
-	public List<Modelo> leer(Modelo pModel) throws ClassNotFoundException, SQLException {
+	public List<Modelo> leer(Modelo pModelo) throws ClassNotFoundException, SQLException {
 		ConnectionManager.conectar();
 		conexion= ConnectionManager.getConection();
 		
@@ -96,7 +96,7 @@ public class AlumnoDAO implements DAO {
 		StringBuilder sql = new StringBuilder("select  ALU_ID, ALU_NOMBRE, ALU_APELLIDO ,ALU_EMAIL, "	);		
 					  sql			.append	       ("ALU_CONOCIMIENTOS, ALU_GIT ")
 					  				.append	       (" FROM ALUMNOS  "			);
-		Alumno alu = (Alumno)pModel;
+		Alumno alu = (Alumno)pModelo;
 		
 		PreparedStatement stm = null;
 
