@@ -1,9 +1,24 @@
 package com.gabrielCode.model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Persona {
 	//atributos
+	@Id
 	private int codigo;
+	@Column(name = "PER_NOMBRE", length = 50)
 	private String nombre;
+	
+	//constructores
+	public Persona() {}	
+	
+	public Persona(int pCod, String pNom) {
+		codigo = pCod;
+		nombre = pNom;
+	}	
 	
 	//accesors
 	public int getCodigo() {
