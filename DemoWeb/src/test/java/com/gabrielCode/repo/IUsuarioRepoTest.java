@@ -7,6 +7,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import com.gabrielCode.model.Usuario;
 
@@ -17,9 +18,12 @@ class IUsuarioRepoTest {
 	IUsuarioRepo usuRepo;
 	Usuario usu;
 	
+	@Autowired
+	BCryptPasswordEncoder encoder;
+	
 	@BeforeEach
 	void setUp() throws Exception {
-		usu = new Usuario(10, "Gabriel", "gcasas");
+		usu = new Usuario(0, "Gabriel", encoder.encode("gcasas"));
 	}
 
 	@AfterEach
@@ -30,7 +34,7 @@ class IUsuarioRepoTest {
 	@Test
 	void testAgregar() {
 		Usuario usuRetorno = usuRepo.save(usu);
-		assertEquals("gcasas", usuRetorno.getClave());
+		assertEquals(usu.getClave(), usuRetorno.getClave());
 	}
 
 }
