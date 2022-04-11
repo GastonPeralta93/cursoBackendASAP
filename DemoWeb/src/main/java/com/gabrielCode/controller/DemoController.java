@@ -18,7 +18,10 @@ import com.gabrielCode.repo.IPersonaRepo;
 		@GetMapping("/greeting")
 		public String greeting(@RequestParam(name="name", required=false, defaultValue="World") String name, Model model) {
 			
-			Persona per = new Persona(1, "Gabriel Casas");
+			if(name==null || name.isEmpty())
+				name="GabrielCode";
+			
+			Persona per = new Persona(0, name);
 			repo.save(per);
 			
 			model.addAttribute("name", name);
